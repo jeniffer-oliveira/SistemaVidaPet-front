@@ -29,6 +29,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 import { ServicoComponent } from './components/servico/servico.component';
 import { LoginComponent } from './components/login/login.component';
+import { ClienteService } from './services/cliente.service';
+import { FuncionarioService } from './services/funcionario.service';
+import { ServicoService } from './services/servico.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,7 @@ import { LoginComponent } from './components/login/login.component';
     MatListModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [ClienteService, FuncionarioService, ServicoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
