@@ -1,0 +1,241 @@
+{
+    "clientes": [
+        {
+            "id": "0", 
+            "nomeCliente": "Caroline Maria Fernandes Peixoto",
+            "cpf": "484.982.345-90",
+            "nomePet": "Rhaenyra",
+            "especiePet": "Gato",
+            "servico": "Vacina V5",
+            "data": "15/12/2022",
+            "valor": "150.00"
+          },
+          {
+            "id": "1", 
+            "nomeCliente": "Maria Helena Ramos",
+            "cpf": "523.955.444-77",
+            "nomePet": "Lis",
+            "especiePet": "Cachorro",
+            "servico": "Banho e Tosa",
+            "data": "15/12/2022",
+            "valor": "150.00"
+        },
+        {
+          "id": "2", 
+          "nomeCliente": "Fernanda Alves Santos",
+          "cpf": "709.991.783-85", 
+          "nomePet": "Lola",
+          "especiePet": "Coelho",
+          "servico": "Castração",
+          "data": "16/12/2022",
+          "valor": 300.00
+        },
+        {
+          "id": 3, 
+          "nomeCliente": "Matheus Henrique Cruz",
+          "cpf": "719.624.423-06",
+          "nomePet": "Bartolomeu",
+          "especiePet": "Cachorro",
+          "servico": "Banho e Tosa",
+          "data": "20/12/2022",
+          "valor": "100.00"
+        },
+        {
+          "id": 4, 
+          "nomeCliente": "Manoel João da Cruz",
+          "cpf": "742.150.513-04", 
+          "nomePet": "Piclés",
+          "especiePet": "Cachorro",
+          "servico": "Vacina antirrábica",
+          "data": "23/12/2022",
+          "valor": "200.00"
+        },
+        {
+          "id": 5, 
+          "nomeCliente": "Bianca de Oliveira Andrade",
+          "cpf": "712.521.163-14", 
+          "nomePet": "Amora",
+          "especiePet": "Hamster",
+          "servico": "Ultrassom",
+          "data": "24/12/2022",
+          "valor": "350.00"
+        },
+        {
+          "id": 6, 
+          "nomeCliente": "Guilherme Henrique Campos",
+          "cpf": "499.861.367-76", 
+          "nomePet": "Arthur",
+          "especiePet": "Cachorro",
+          "servico": "Banho e Tosa",
+          "data": "26/12/2022",
+          "valor": "150.00"
+        },
+        {
+          "id": 7, 
+          "nomeCliente": "Ronaldo Campos Santos",
+          "cpf": "001.655.000-50",
+          "nomePet": "Pit",
+          "especiePet": "Cachorro",
+          "servico": "Vacina antirrábica",
+          "data": "28/12/2022",
+          "valor": "200.00"
+        },
+        {
+          "id": 8, 
+          "nomeCliente": "Maria Olívia Santana",
+          "cpf": "076.718.706-76",
+          "nomePet": "Liza",
+          "especiePet": "Gato",
+          "servico": "Vacina V5",
+          "data": "23/12/2022",
+          "valor": "250.00"
+        },
+        {
+          "id": 9, 
+          "nomeCliente": "Beatriz de Almeida Cruz",
+          "cpf": "910.844.720-90",
+          "nomePet": "Serena",
+          "especiePet": "Gato",
+          "servico": "Vacina V5",
+          "data": "15/01/2023",
+          "valor": 250.00
+        },
+        {
+          "id": 10, 
+          "nomeCliente": "Juan Diego Baptista",
+          "cpf": "255.900.329-540",
+          "nomePet": "Olivia",
+          "especiePet": "Cachorro",
+          "servico": "Oftamologista",
+          "data": "15/01/2023",
+          "valor": 350.00
+        },
+        {
+          "id": "11", 
+          "nomeCliente": "Enzo Leonardo Almeida",
+          "cpf": "112.034.640-10",
+          "nomePet": "Sirius Black",
+          "especiePet": "Gato",
+          "servico": "Vacina antirrábica",
+          "data": "15/01/2023",
+          "valor": 200.00
+        }
+    ],
+
+    "funcionarios": [
+        {
+            "id": "0",
+            "nome": "Priscila Milena Luciana Aragão",
+            "cpf": "627.816.947-97",
+            "servico": "Banho e Tosa",
+            "email": "priscila_aragao@atualvendas.com",
+            "senha": "l8wCcD6Jww",
+            "celular": "(13) 98766-5308"
+        },
+        {
+            "id": "1",
+            "nome": "Elisa Sandra Santos",
+            "cpf": "467.367.052-31",
+            "servico": "Veterinário",
+            "email": "elisa_sandra_santos@iega.com.br",
+            "senha": "KTCC6n4kBj",
+            "celular": "(13) 98755-7388"
+        },
+        {
+            "id": "2",
+            "nome": "Otávio Sara Moraes",
+            "cpf": "514.643.740-82",
+            "servico": "Banho e Tosa",
+            "email": "otavio.elza.moraes@rgsa.com.br",
+            "senha": "04jIthIkaH",
+            "celular": "(21) 99408-3437"
+        },
+        {
+            "id": "3",
+            "nome": "Giovanne Ramon Souza",
+            "cpf": "054.177.833-15",
+            "servico": "Veterinário-oftamologista",
+            "email": "giovannersouza@sectron.com.br",
+            "senha": "J7I49Teffj",
+            "celular": "(21) 98304-9147"
+        },
+        {
+            "id": "4",
+            "nome": "Isabela Gabrielly Viana",
+            "cpf": "622.664.096-03",
+            "servico": "Atendente",
+            "email": "isabela_gabrielly_viana@jarretta.com",
+            "senha": "GldCjZnyh7",
+            "celular": "(92) 99249-6628"
+        },
+        {
+            "id": "5",
+            "nome": "Sônia Regina Olivia Lopes",
+            "cpf": "078.493.020-10",
+            "servico": "Veterinária",
+            "email": "sonia-lopes71@obrativaengenharia.com.br",
+            "senha": "kqoBck5nOU",
+            "celular": "(51) 98901-9372"
+        },
+         {
+            "id": "6",
+            "nome": "Louise Alícia da Paz",
+            "cpf": "732.357.582-67",
+            "servico": "Atendente",
+            "email": "louise_alicia_dapaz@nipbr.com.br",
+            "senha": "HxIc0DuZ21",
+            "celular": "(98) 98533-3137"
+        },
+        {
+            "id": "7",
+            "nome": "Lúcia Elza Rebeca da Mota",
+            "cpf": "387.587.903-14",
+            "servico": "Banho e Tosa",
+            "email": "luciaelzadamota@plenamenterh.com.br",
+            "senha": "mNTHKowI12",
+            "celular": "(63) 98505-2599"
+        },
+        {
+            "id": "8",
+            "nome": "Sabrina Gabriela Fabiana da Mata",
+            "cpf": "827.352.049-87",
+            "servico": "Veterinária",
+            "email": "sabrina-damata79@heineken.com.br",
+            "senha": "nNEErZPImW",
+            "celular": "(41) 99248-0036"
+        },
+        {
+            "id": "9",
+            "nome": "Agatha Eloá Galvão",
+            "cpf": "525.627.400-76",
+            "servico": "Atendente",
+            "email": "agatha.eloa.galvao@bmalaw.com.br",
+            "senha": "ndtwWy4UMM",
+            "celular": "(63) 98697-7341"
+        }
+    ],
+
+    "servicos": [
+        {
+            "id": "0",
+            "nomeServico": "Banho e Tosa",
+            "valor": "Entre 100.00 a 200.00"
+        },
+        {
+            "id": "1",
+            "nomeServico": "Exames",
+            "valor": "A partir de 50 reais"
+        },
+        {
+            "id": "2",
+            "nomeServico": "Vacina",
+            "valor": "A partir de 150.00"
+        },
+        {
+            "id": "3",
+            "nomeServico": "Consultas",
+            "valor": "A partir de 150.00"
+        }
+    ]
+
+}

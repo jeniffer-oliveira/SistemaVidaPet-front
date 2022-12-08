@@ -1,0 +1,32 @@
+.container {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 46%, rgba(195,246,233,1) 46%);
+    display: flex;
+}
+
+.logomarca{
+    margin: 20rem 5rem auto 25rem;
+    justify-content: right;
+}
+
+.form{
+    margin: 15rem 5rem auto 5rem;
+    justify-content: left;
+    background-color: #c3f6e9;
+    padding: 4rem 1rem;
+    border-radius: 1rem;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.full-width{
+    width: 100%;
+}
+
+button{
+    margin-top: 1rem;
+}
