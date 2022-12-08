@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Credenciais } from 'src/app/models/Credenciais';
 
 @Component({
@@ -9,25 +9,30 @@ import { Credenciais } from 'src/app/models/Credenciais';
 })
 export class LoginComponent implements OnInit {
 
-  creds: Credenciais = {
-    email: '',
-    senha: '',
+  loginForm: FormGroup
+
+  constructor(private fb: FormBuilder) { 
+    this.loginForm = fb.group(
+      {
+        email:['',[Validators.email, Validators.required]],
+        password: ['', [Validators.required, Validators.minLength(6)]]
+      }
+    )
   }
-
-  email = new FormControl(null, Validators.email);
-  senha = new FormControl(null, Validators.minLength(3));
-
-  constructor() { }
 
   ngOnInit(): void {
   }
 
   validaCampos(): boolean{
-    if(this.email.valid && this.senha.valid){
+    if(this.loginForm){
       return true;
     }else{
       return false;
     }
+  }
+
+  submit(){
+    console.log(this.loginForm.getRawValue())
   }
 
 }
