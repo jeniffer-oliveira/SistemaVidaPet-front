@@ -1,8 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
+import { Component, OnInit} from '@angular/core';;
 import { Cliente } from 'src/app/models/Cliente';
-import { ClienteService } from 'src/app/services/cliente.service';
+import { ServicosGeraisService } from 'src/app/services/servicosGerais.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,25 +8,21 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class HomeComponent implements OnInit {
   clientes: Cliente[] = [];
-  
-  displayedColumns: string[] = ['id', 'nomeCliente', 'cpf', 'nomePet', 'especiePet', 'servico', 'data', 'valor'];
-  dataSource = new MatTableDataSource<Cliente>(this.clientes);
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
-
-  constructor(private clienteService: ClienteService) {
+  constructor(private servicosGeraisService: ServicosGeraisService ){
     this.getClientes();
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  getClientes(): void{
-    this.clienteService.getAll().subscribe((clientes) => (this.clientes = clientes))
+  getClientes(): void {
+    this.servicosGeraisService.getAllClientes().subscribe((clientes) => (this.clientes = clientes))
   }
 
+  removeClientes(cliente: Cliente){
+    this.clientes = this.clientes.filter((c) => cliente.id !== c.id);
+    this.servicosGeraisService.removeCliente(cliente.id).subscribe()
+  }
 }
+

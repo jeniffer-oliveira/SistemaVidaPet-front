@@ -10,28 +10,7 @@ import { Service } from 'src/app/models/Servico';
 })
 export class ServicoComponent implements OnInit {
 
-  ELEMENT_DATA: Service[] = [
-    {
-      "id": "0",
-      "nomeServico": "Banho e Tosa",
-      "valor": "Entre 100.00 a 200.00"
-    },
-    {
-      "id": "1",
-      "nomeServico": "Exames",
-      "valor": "A partir de 50 reais"
-    },
-    {
-      "id": "2",
-      "nomeServico": "Vacina",
-      "valor": "A partir de 150.00"
-    },
-    {
-      "id": "3",
-      "nomeServico": "Consultas",
-      "valor": "A partir de 150.00"
-    }   
-  ]
+  ELEMENT_DATA: Service[] = []
 
   displayedColumns: string[] = ['id', 'nomeServico', 'valor'];
   dataSource = new MatTableDataSource<Service>(this.ELEMENT_DATA);

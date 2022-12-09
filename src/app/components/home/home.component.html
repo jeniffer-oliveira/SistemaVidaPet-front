@@ -1,54 +1,18 @@
 <div class="container">
-    <div class="mat-elevation-z8">
-      <table mat-table [dataSource]="dataSource" *ngFor="let cliente of clientes">
+    <ul>
+      <li *ngFor="let cliente of cliente">
+        <strong> ID: </strong> {{ cliente.id }}<br>
+        <strong> Nome do Cliente: </strong> {{ cliente.nomeCliente }}<br>
+        <strong> CPF: </strong> {{ cliente.cpf }}<br>
+        <strong> Nome do Pet: </strong> {{ cliente.nomePet }}<br>
+        <strong> Espécie do Pet: </strong> {{ cliente.especiePet }}<br>
+        <strong> Serviço: </strong> {{ cliente.servico }}<br>
+        <strong> Data: </strong> {{ cliente.data }}<br>
+        <strong> Valor (R$): </strong> {{ cliente.valor }}
+      </li>
+    </ul>
 
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef> Id </th>
-          <td> {{cliente.id}} </td>
-        </ng-container>
-    
-        <ng-container matColumnDef="nomeCliente">
-          <th mat-header-cell *matHeaderCellDef> Nome do Cliente </th>
-          <td> {{cliente.nomeCliente}} </td>
-        </ng-container>
-    
-        <ng-container matColumnDef="cpf">
-          <th mat-header-cell *matHeaderCellDef> CPF </th>
-          <td> {{cliente.cpf}} </td>
-        </ng-container>
-    
-        <ng-container matColumnDef="nomePet">
-          <th mat-header-cell *matHeaderCellDef> Nome do Pet </th>
-          <td celmat-l *matCellDef="let element"> {{cliente.nomePet}} </td>
-        </ng-container>
+    <button (click)="removeClientes(clientes)">Excluir</button>
 
-        <ng-container matColumnDef="especiePet">
-          <th mat-header-cell *matHeaderCellDef> Espécie do Pet </th>
-          <td mat-cell *matCellDef="let element"> {{cliente.especiePet}} </td>
-        </ng-container>
-    
-        <ng-container matColumnDef="servico">
-          <th mat-header-cell *matHeaderCellDef> Serviço </th>
-          <td mat-cell *matCellDef="let element"> {{cliente.servico}} </td>
-        </ng-container>
-
-        <ng-container matColumnDef="data">
-          <th mat-header-cell *matHeaderCellDef> Data </th>
-          <td mat-cell *matCellDef="let element"> {{cliente.data}} </td>
-        </ng-container>
-
-        <ng-container matColumnDef="valor">
-          <th mat-header-cell *matHeaderCellDef> Valor (R$) </th>
-          <td mat-cell *matCellDef="let element"> {{cliente.valor}} </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-    
-      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                     showFirstLastButtons
-                     aria-label="Select page of periodic elements">
-      </mat-paginator>
-    </div>
 </div>
+

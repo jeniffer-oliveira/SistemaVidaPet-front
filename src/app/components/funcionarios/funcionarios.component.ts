@@ -1,31 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { ViewChild } from '@angular/core';
+import { ServicosGeraisService } from 'src/app/services/servicosGerais.service';
 import { Funcionario } from 'src/app/models/Funcionario';
-import { FuncionarioService } from 'src/app/services/funcionario.service';
+
 @Component({
   selector: 'app-funcionarios',
   templateUrl: './funcionarios.component.html',
   styleUrls: ['./funcionarios.component.css']
 })
+
 export class FuncionariosComponent implements OnInit {
   funcionarios: Funcionario[] = []
   
-    displayedColumns: string[] = ['position', 'nome', 'cpf', 'service', 'email'];
-    dataSource = new MatTableDataSource<Funcionario>(this.funcionarios);
-  
-    @ViewChild(MatPaginator) paginator: MatPaginator;
+    constructor(private servicosGeraisService: ServicosGeraisService){
+      this.getFuncionarios();
+    }
 
-  constructor(private funcionarioService: FuncionarioService) { 
-    this.getFuncionarios()
-  }
 
   ngOnInit(): void {
   }
 
-  getFuncionarios(): void{
-    this.funcionarioService.getAll().subscribe((funcionarios) => (this.funcionarios = funcionarios))
+  getFuncionarios(): void {
+    this.servicosGeraisService.getAllFuncionarios().subscribe((funcionarios) => (this.funcionarios) = funcionarios)
   }
 
+  removeFuncionarios(funcionario: Funcionario){
+    this.funcionarios = this.funcionarios.filter((f) => funcionario.id !== f.id)
+    this.servicosGeraisService.removeCliente(funcionario.id).subscribe()
+  }
+  
 }

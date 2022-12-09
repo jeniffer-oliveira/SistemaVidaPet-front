@@ -1,14 +1,14 @@
 {
   "clientes": [
       {
-          "id": "0", 
+          "id": 0, 
           "nomeCliente": "Caroline Maria Fernandes Peixoto",
           "cpf": "484.982.345-90",
           "nomePet": "Rhaenyra",
           "especiePet": "Gato",
           "servico": "Vacina V5",
           "data": "15/12/2022",
-          "valor": "150.00"
+          "valor": 150.00
         },
         {
           "id": "1", 

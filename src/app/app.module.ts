@@ -24,24 +24,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
-import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 import { ServicoComponent } from './components/servico/servico.component';
 import { LoginComponent } from './components/login/login.component';
-import { ClienteService } from './services/cliente.service';
-import { FuncionarioService } from './services/funcionario.service';
-import { ServicoService } from './services/servico.service';
+import { HomeComponent } from './components/home/home.component';
+import { ServicosGeraisService } from './services/servicosGerais.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent,
     HeaderComponent,
     FuncionariosComponent,
     ServicoComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,
@@ -65,7 +63,7 @@ import { ServicoService } from './services/servico.service';
     MatListModule,
     MatCardModule
   ],
-  providers: [ClienteService, FuncionarioService, ServicoService],
+  providers: [ServicosGeraisService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
