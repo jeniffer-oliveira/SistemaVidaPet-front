@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
+import { ServicosGeraisService } from 'src/app/services/servicosGerais.service';
 import { Service } from 'src/app/models/Servico';
 
 @Component({
@@ -10,20 +9,22 @@ import { Service } from 'src/app/models/Servico';
 })
 export class ServicoComponent implements OnInit {
 
-  ELEMENT_DATA: Service[] = []
+  servicos: Service[] = [];
 
-  displayedColumns: string[] = ['id', 'nomeServico', 'valor'];
-  dataSource = new MatTableDataSource<Service>(this.ELEMENT_DATA);
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
-
-  constructor() { }
+  constructor(private servicosGeraisService: ServicosGeraisService) {
+    this.getServicos()
+   }
 
   ngOnInit(): void {
+  }
+
+  getServicos(): void {
+    this.servicosGeraisService.getAllServicos().subscribe((servicos) => (this.servicos = servicos))
+  }
+
+  removeServicos(servico: Service){
+    this.servicos = this.servicos.filter((s) => servico.nomeServico !== s.nomeServico);
+    this.servicosGeraisService.removeServico(servico.id).subscribe
   }
 
 }

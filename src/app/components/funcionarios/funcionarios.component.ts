@@ -15,7 +15,6 @@ export class FuncionariosComponent implements OnInit {
       this.getFuncionarios();
     }
 
-
   ngOnInit(): void {
   }
 
@@ -24,7 +23,7 @@ export class FuncionariosComponent implements OnInit {
   }
 
   removeFuncionarios(funcionario: Funcionario){
-    this.funcionarios = this.funcionarios.filter((f) => funcionario.id !== f.id)
+    this.funcionarios = this.funcionarios.filter((f) => funcionario.nome !== f.nome)
     this.servicosGeraisService.removeCliente(funcionario.id).subscribe()
   }
   

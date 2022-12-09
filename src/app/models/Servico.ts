@@ -1,5 +1,5 @@
 export interface Service {
-    id?: any;
+    id: number;
     nomeServico: string;
     valor: string
 }

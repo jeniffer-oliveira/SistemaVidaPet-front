@@ -1,6 +1,8 @@
 <div class="container">
+  <button class="btn-li"> Adicionar Cliente </button>
+  <button class="btn-li"> Remover Cliente </button>
     <ul>
-      <li *ngFor="let cliente of cliente">
+      <li *ngFor="let cliente of clientes">
         <strong> ID: </strong> {{ cliente.id }}<br>
         <strong> Nome do Cliente: </strong> {{ cliente.nomeCliente }}<br>
         <strong> CPF: </strong> {{ cliente.cpf }}<br>
@@ -12,7 +14,7 @@
       </li>
     </ul>
 
-    <button (click)="removeClientes(clientes)">Excluir</button>
-
+<!--    <button (click)="removeClientes(clientes)">Excluir</button>
+-->
 </div>
 

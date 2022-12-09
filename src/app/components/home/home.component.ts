@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   removeClientes(cliente: Cliente){
-    this.clientes = this.clientes.filter((c) => cliente.id !== c.id);
+    this.clientes = this.clientes.filter((c) => cliente.nomeCliente !== c.nomeCliente);
     this.servicosGeraisService.removeCliente(cliente.id).subscribe()
   }
 }

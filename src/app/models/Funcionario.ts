@@ -1,5 +1,5 @@
 export interface Funcionario{
-    id?: any;
+    id: number;
     nome: string;
     cpf: string;
     servico: string;
