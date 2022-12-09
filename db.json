@@ -236,6 +236,12 @@
           "nomeServico": "Consultas",
           "valor": "A partir de 150.00"
       }
+  ],
+
+  "usuarios": [
+    {
+      
+    }
   ]
 
 }

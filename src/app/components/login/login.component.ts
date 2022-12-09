@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Credenciais } from 'src/app/models/Credenciais';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -22,14 +21,6 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  validaCampos(): boolean{
-    if(this.loginForm){
-      return true;
-    }else{
-      return false;
-    }
   }
 
   submit(){
